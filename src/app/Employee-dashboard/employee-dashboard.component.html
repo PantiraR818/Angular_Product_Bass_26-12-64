@@ -1,0 +1,73 @@
+<!--1. สร้างฟอร์ม
+    2. Database
+    3. ผูก2อันรวมกัน -->
+<nav class="navbar navbar-expand-lg navbar-danger bg-danger">
+    <div class="container-fluid">
+        <h3 class="text-light">APOLLO STORE</h3>
+        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+        (click) ="clickAdd()">
+            <b>+ </b>
+            Add New Product
+        </button>
+    </div>
+</nav>
+<table class="table text-center mt-4">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Stock</th>
+            <th>Image</th>
+            <th>Price</th>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of EmployeeData">
+            <td>{{data.id}}</td>
+            <td>{{data.Product}}</td>
+            <td>{{data.Stock}}</td>
+            <td><img src="{{data.Img}}" width="150" height="200"></td>
+            <td>{{data.Price}}</td>
+            <td>
+                <button class="btn btn-danger me-4" (click)="deleteEmployee(data.id)">Delete</button>
+                <button class="btn btn-info text" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="clickEdit(data)" >Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Modal เด้ง pop-up-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Apollo-Store Product-Dashboard</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formEmployee"> 
+            Product (ชื่อสินค้า)
+            <input type="text" class="form-control"
+            formControlName="Product">
+            Stock (สต็อคสินค้า)
+            <input type="text" class="form-control"
+            formControlName="Stock">
+            Image (URL) (ลิ้งรูปภาพ)
+            <input type="text" class="form-control"
+            formControlName="Img">
+            Price (ราคาสินค้า)
+            <input type="text" class="form-control"
+            formControlName="Price">
+            <!-- Salary 
+            <input type="text" class="form-control"
+            formControlName="Salary"> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Close</button>
+        <button type="button" class="btn btn-primary" (click)="postEmployee()" *ngIf="showAdd">Save</button>
+        <button type="button" class="btn btn-success" (click)="updateEmployee()" *ngIf="showUpdate">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

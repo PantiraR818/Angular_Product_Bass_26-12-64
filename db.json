@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "Product": "น้ำส้ม",
+      "Price": "65",
+      "Stock": "10",
+      "Img": "https://images.pexels.com/photos/338713/pexels-photo-338713.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+      "id": 2,
+      "Product": "น้ำเลม่อนมิ้นต์",
+      "Price": "45",
+      "Stock": "50",
+      "Img": "https://images.pexels.com/photos/1187766/pexels-photo-1187766.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+      "id": 3,
+      "Product": "น้ำอบเชย",
+      "Price": "99",
+      "Stock": "110",
+      "Img": "https://images.pexels.com/photos/989711/pexels-photo-989711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "id": 4,
+      "Product": "นม",
+      "Price": "78",
+      "Stock": "99",
+      "Img": "https://images.pexels.com/photos/6034024/pexels-photo-6034024.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+      "id": 5,
+      "Product": "ไวน์องุ่น",
+      "Price": "199",
+      "Stock": "11",
+      "Img": "https://images.pexels.com/photos/8473011/pexels-photo-8473011.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+      "id": 6,
+      "Product": "ชา",
+      "Price": "88",
+      "Stock": "110",
+      "Img": "https://images.pexels.com/photos/230490/pexels-photo-230490.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
